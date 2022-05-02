@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D4D4D4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #898989;
+}

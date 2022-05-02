@@ -1,0 +1,33 @@
+<div>
+  <h1 mat-dialog-title>Create Learning</h1>
+
+  <form
+    class="user-form"
+    [formGroup]="learningForm"
+    (ngSubmit)="onSubmit(learningForm.value)"
+  >
+    <mat-form-field class="w-100 mb-3">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Learning Name" formControlName="name">
+      <mat-error *ngIf="getErrorMessage('name')">
+        {{getErrorMessage('name')}}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100 mb-3">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="active">Active</mat-option>
+        <mat-option value="archived">Archived</mat-option>
+      </mat-select>
+      <mat-error *ngIf="getErrorMessage('status')">
+        {{getErrorMessage('name')}}
+      </mat-error>
+    </mat-form-field>
+
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-stroked-button (click)="handleClose()" type="button">Cancel</button>
+      <button mat-flat-button color="primary" type="submit">Save</button>
+    </div>
+  </form>
+</div>

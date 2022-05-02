@@ -1,0 +1,4 @@
+<img *ngIf="src" [src]="src" alt="" class="avatar-image" />
+<div *ngIf="!src" class="avatar-box">
+  {{name ? name.charAt(0) : '*'}}
+</div>

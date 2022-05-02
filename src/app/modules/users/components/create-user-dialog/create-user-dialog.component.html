@@ -1,0 +1,30 @@
+<div>
+  <h1 mat-dialog-title>Create User</h1>
+
+  <form
+    class="user-form"
+    [formGroup]="userForm"
+    (ngSubmit)="onSubmit(userForm.value)"
+  >
+    <mat-form-field class="w-100 mb-3">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="User Name" formControlName="name">
+      <mat-error *ngIf="getErrorMessage('name')">
+        {{getErrorMessage('name')}}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100 mb-3">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email">
+      <mat-error *ngIf="getErrorMessage('email')">
+        {{getErrorMessage('email')}}
+      </mat-error>
+    </mat-form-field>
+
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-stroked-button (click)="handleClose()" type="button">Cancel</button>
+      <button mat-flat-button color="primary" type="submit">Save</button>
+    </div>
+  </form>
+</div>
